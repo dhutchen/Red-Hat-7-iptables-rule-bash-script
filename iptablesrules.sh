@@ -6,10 +6,6 @@ iptables -A INPUT -s 127.0.0.1/32 -p tcp -j ACCEPT
 
 iptables -A OUTPUT -d 127.0.0.1/32 -p tcp -j ACCEPT
 
-iptables -A INPUT -s 3.83.133.166/32 -p tcp -j ACCEPT
-
-iptables -A OUTPUT -d 3.83.133.166/32 -p tcp -j ACCEPT
-
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 
 iptables -A INPUT -p icmp -j ACCEPT
